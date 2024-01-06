@@ -1,28 +1,23 @@
-import {createStore} from 'redux'
+import { INCREMENT, DECREMENT } from "./types"
 
 const initialState = {
-    likes: 10
+    likes: 0
 }
 
-const reducer = (state = initialState, action) =>{
-    console.log('reducer >', action);
+export const likesReducer = (state = initialState, action) =>{
     
+    console.log('likesReducer >', action)
     switch (action.type){
-        case 'INCREMENT':
+        case INCREMENT:
             return {
                 ...state, likes: state.likes + 1
             }
-        case 'DICREMENT':
+        case DECREMENT:
             return{
                 ...state, likes: state.likes - 1
             }
             default:
                 return state
     }
-
-    return state;
+            return state
 }
-
-const store = createStore(reducer);
-
-export default store;
