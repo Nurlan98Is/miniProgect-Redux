@@ -12,8 +12,9 @@ function Likes(props){
 
 function mapStateToProps(state){
     console.log('mapStateToProps >', state)
+    const { likesReducer } = state
     return{
-        likes: state.likes
+        likes: likesReducer.likes
     }
     
 }
@@ -26,7 +27,7 @@ function mapDispatchToProps(dispatch){
             dispatch(action);
         },
         onDicrement: ()=>{
-            const action = {type: 'DICREMENT'}
+            const action = {type: 'DECREMENT'}
             dispatch(action)
         }
     }
