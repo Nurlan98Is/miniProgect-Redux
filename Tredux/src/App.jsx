@@ -1,4 +1,5 @@
 import Likes from './Likes'
+import { Title } from './Title';
 import './App.css'
 
 
@@ -9,6 +10,7 @@ function App() {
         <div className="card">
           <div className="card-image">
             <img src="./sea.jpg" alt="surfing"/>
+            <Title/>
             <Likes/>
           </div>
         </div>
