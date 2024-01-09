@@ -5,13 +5,11 @@ import { nanoid } from "@reduxjs/toolkit";
 import { useState } from "react"
 
 export const Comments = (props) => {
-    console.log('comments props', props)
     const [textComment, setTextComment] = useState('');
 
     const comments = useSelector(state => {
         const { commentsReducer } = state
         return commentsReducer.comments
-        console.log('comments props >', comment)
     })
     const dispatch = useDispatch();
 
