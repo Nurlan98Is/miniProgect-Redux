@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
-import { likesReducer } from '../Redux/LikesReducer'
-import { inputReducer } from './InputReduces'
+import { likesReducer } from './likesReducer';
+import { inputReducer } from './InputReduces';
+import { commentsReducer } from './commentReducer';
 export const rootReducer = combineReducers({
     likesReducer,
     inputReducer,
+    commentsReducer,
 })

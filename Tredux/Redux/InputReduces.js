@@ -1,5 +1,5 @@
 import { INPUT_TEXT } from "./types";
-import { inputText } from "./Actions.Js";
+
 const initialState = {
     text: ''
 }
